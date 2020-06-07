@@ -1,0 +1,137 @@
+* {
+  font-family: "PT Sans", sans-serif; }
+
+body {
+  background-color: rgba(236, 236, 236, 0.15); }
+
+.name {
+  padding: 10%; }
+  .name h1 {
+    font-family: "Josefin Slab", serif;
+    font-size: 80px;
+    color: #05002f; }
+  .name .buttons button {
+    border: 2px solid #2d35aa;
+    border-radius: 2px;
+    padding: 6px 15px;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden; }
+    .name .buttons button div {
+      transition: all 0.3s ease-in-out; }
+    .name .buttons button:hover {
+      background-color: #a2a6f2;
+      color: white;
+      transition: all 0.5 ease-in-out; }
+      .name .buttons button:hover div {
+        opacity: 0;
+        transform: translate(100%, 0); }
+    .name .buttons button::before {
+      position: absolute;
+      content: attr(data-hover);
+      left: 0;
+      transform: translate(-100%, 0);
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      opacity: 0; }
+    .name .buttons button:hover::before {
+      opacity: 1;
+      transform: translate(0, 0);
+      transition: all 0.3 ease-in-out; }
+
+.my-pic {
+  position: relative;
+  height: 450px;
+  background-color: #2d35aa;
+  width: 27%; }
+  .my-pic:hover .dots {
+    background-image: radial-gradient(white 1px, transparent 0);
+    left: 80px;
+    top: 20px;
+    transition: all 300ms ease-in-out; }
+  .my-pic:hover .image {
+    left: -57%;
+    top: 27%;
+    transition: all 300ms ease-in-out; }
+    .my-pic:hover .image .ball {
+      transition: all 600ms ease-in-out; }
+      .my-pic:hover .image .ball:nth-child(1) {
+        left: 60px;
+        top: 10px; }
+      .my-pic:hover .image .ball:nth-child(2) {
+        left: 20px;
+        top: 40px; }
+      .my-pic:hover .image .ball:nth-child(3) {
+        left: 30px;
+        top: 120px; }
+      .my-pic:hover .image .ball:nth-child(4) {
+        right: 10px;
+        bottom: 100px; }
+      .my-pic:hover .image .ball:nth-child(5) {
+        right: 30px;
+        bottom: 120px; }
+      .my-pic:hover .image .ball:nth-child(6) {
+        right: 30px;
+        bottom: 90px; }
+  .my-pic .dots {
+    transition: all 300ms ease-in-out;
+    width: 150px;
+    height: 170px;
+    left: 100px;
+    top: 30px;
+    position: absolute;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.521) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -19px -19px; }
+  .my-pic .image {
+    transition: all 300ms ease-in-out;
+    position: absolute;
+    padding-top: calc(1323 / 1080 * 100%);
+    width: 100%;
+    background-image: url("../images/profile.jpg");
+    background-position: center;
+    background-size: contain;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    left: -55%;
+    top: 25%; }
+    .my-pic .image .ball {
+      transition: all 600ms ease-in-out;
+      position: absolute;
+      background-color: white;
+      border-radius: 100%;
+      opacity: 0.2; }
+      .my-pic .image .ball:nth-child(1) {
+        height: 20px;
+        width: 20px;
+        left: 10px;
+        top: 105px; }
+      .my-pic .image .ball:nth-child(2) {
+        height: 50px;
+        width: 50px;
+        left: 40px;
+        top: 124px; }
+      .my-pic .image .ball:nth-child(3) {
+        height: 30px;
+        width: 30px;
+        left: 50px;
+        top: 60px; }
+      .my-pic .image .ball:nth-child(4) {
+        height: 10px;
+        width: 10px;
+        right: 80px;
+        bottom: 50px; }
+      .my-pic .image .ball:nth-child(5) {
+        height: 60px;
+        width: 60px;
+        right: -20px;
+        bottom: 80px; }
+      .my-pic .image .ball:nth-child(6) {
+        height: 30px;
+        width: 30px;
+        right: 30px;
+        bottom: 20px; }
+
+/*# sourceMappingURL=style.css.map */
