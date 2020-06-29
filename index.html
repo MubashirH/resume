@@ -8,18 +8,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="" type="image/svg" size="16x16">    
+    <link rel="icon" href="images/icon/logo.png" type="image/svg" size="16x16">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"> 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link href="css/style.css" rel="stylesheet">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <div class="container-full">
         <div class="d-flex justify-content-between">
             <div class="name">
+                <div class="menu">
+                    <img src="images/icon/logo.png">
+                    <div class="menu-list"></div>
+                </div>
                 <div>
                     <p class="m-0">Hi, There</p>
                     <h1>I'm Mubashir</h1>
@@ -27,13 +31,17 @@
                     <h6>Front End Developer and love to play BasketBall</h6>
                 </div>
                 <div class="buttons mt-5">
-                    <button data-hover="Connect" class="mr-2"><div>Say Hello!</div></button>
-                    <button data-hover="I am Here"><div>About Me</div></button>
+                    <button data-hover="Connect" class="mr-2">
+                        <div>Say Hello!</div>
+                    </button>
+                    <button data-hover="I am Here">
+                        <div>About Me</div>
+                    </button>
                 </div>
             </div>
             <div class="my-pic">
                 <div class="dots">
-                    
+
                 </div>
                 <div class="image">
                     <div class="ball"></div>
@@ -46,6 +54,50 @@
             </div>
         </div>
     </div>
+    <div class="technologies container-ful">
+        <h2 class="ml-5 mb-5">Work With:</h2>
+        <div class="tech-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/icon/html-5.svg"></div>
+                <div class="swiper-slide"><img src="images/icon/css.svg"></div>
+                <div class="swiper-slide"><img src="images/icon/js-format.svg"></div>
+                <div class="swiper-slide"><img src="images/icon/angular.svg"></div>
+                <div class="swiper-slide"><img src="images/icon/sass.svg"></div>
+                <div class="swiper-slide"><img src="images/icon/after-effects.svg"></div>
+                <div class="swiper-slide"><img src="images/icon/illustrator.svg"></div>
+                <div class="swiper-slide"><img src="images/icon/experience.svg"></div>
+                <div class="swiper-slide"><img src="images/icon/photoshop.svg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container project mt-5">
+        <div class="row">
+            <div class="col-12 col-sm-5 col-md-4">
+                <h2 class="mb-5">Recent Projects</h2>
+                <p class="mr-5">These projects include FreeLance work with many company build projects</p>
+                <p class="mr-5">Where others are product related with sister companies. It also display demo projects that I had prepared. </p>
+            </div>
+            <div class="col-12 col-sm-7 col-md-8">
+                <div class="project-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/project/degree_primero.png"><a href="https://degreeprimero.com/" target="blank">Degree<br/>Primero</a></div>
+                        <div class="swiper-slide"><img src="images/project/ume_designs.png"><a href="http://umedesigns.in/" target="blank">Ume<br/>Designs</a></div>
+                        <div class="swiper-slide"><img src="images/project/tracker_gemeni.png"><a href="https://tracker.gemeniindia.com" target="blank">Tracker<br/>Gemeni</a></div>
+                        <div class="swiper-slide"><img src="images/project/odd_piece.png"><a href="https://the-oddpiece.com/" target="blank">Odd<br/>Piece</a></div>
+                        <div class="swiper-slide"><img src="images/project/speedUpTrader.png"><a href="https://speeduptrader.com/" target="blank">SpeedUp<br/>Trader</a></div>
+                    </div>
+                </div>
+                <button class="swiper-prev">&#8592;</button>
+                <button class="swiper-next">&#8594;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="script/script.js"></script>
 
 </body>
 
