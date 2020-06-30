@@ -210,6 +210,7 @@
       transition: all 150ms ease-in-out; }
 
 .experience .company {
+  padding: 5%;
   position: relative;
   border-top-left-radius: 5px;
   overflow: hidden; }
@@ -234,7 +235,7 @@
     width: 100%;
     height: 100%;
     z-index: 100;
-    background: #2d35aaef;
+    background-image: linear-gradient(315Deg, #2d35aa, white);
     transition: all 150ms ease-in-out; }
 
 /*# sourceMappingURL=style.css.map */
