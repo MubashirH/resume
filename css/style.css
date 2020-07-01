@@ -108,7 +108,7 @@
   .my-pic .image {
     transition: all 300ms ease-in-out;
     position: absolute;
-    padding-top: calc(1323 / 1080 * 100%);
+    padding-top: calc(2236 / 1641 * 100%);
     width: 100%;
     background-image: url("../images/profile.jpg");
     background-position: center;
@@ -228,7 +228,8 @@
       transition: all 150ms ease-in-out; }
 
 .experience {
-  position: relative; }
+  position: relative;
+  margin-bottom: 30px; }
   .experience .section {
     margin-bottom: 30px; }
     .experience .section .logo {
