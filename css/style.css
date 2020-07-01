@@ -273,13 +273,13 @@
         width: 50%; }
       .experience .section .company .width {
         width: 15%; }
-      .experience .section .company a {
+      .experience .section .company .overlay {
         opacity: 0;
         position: absolute;
         border-radius: 50%;
         width: 100%;
-        height: 200%;
-        top: 0%;
+        height: 100%;
+        top: 0;
         left: 0;
         transform: scale(2);
         z-index: 100;
@@ -287,6 +287,13 @@
         animation-name: shrink;
         animation-duration: 1s;
         transition: all 300ms ease-in-out; }
+      .experience .section .company a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000; }
     .experience .section:hover .quantifys {
       transform: translate(-50%, -150%); }
     .experience .section:hover .tentwenty {
@@ -304,7 +311,7 @@
       position: relative;
       opacity: 1;
       transition: all 210ms ease-in-out; }
-    .experience .section:hover .company a {
+    .experience .section:hover .company .overlay {
       opacity: 1;
       animation-name: grow;
       animation-duration: 1s;

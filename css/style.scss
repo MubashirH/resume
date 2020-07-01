@@ -288,19 +288,27 @@
             p { z-index: 200; opacity: 0; color: white;}
             img { width: 50%; }
             .width {width: 15%;}
-            a {
+            .overlay {
                 opacity: 0;
                 position: absolute;
                 border-radius: 50%;
                 width: 100%;
-                height: 200%;
-                top: 0%;
+                height: 100%;
+                top: 0;
                 left: 0;
                 transform: scale(2);
                 z-index: 100;
                 background-image: linear-gradient(135Deg  ,#2d35aa, #2d35aac9);
                 animation-name: shrink; animation-duration: 1s;
                 transition: all 300ms ease-in-out;
+            }
+            a {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1000;
             }
         }
         &:hover {
@@ -311,7 +319,7 @@
             .company {
                 h4 { position: relative; color: white; z-index: 200; opacity: 1;}
                 p { position: relative; opacity: 1; transition: all 210ms ease-in-out;}
-                a { opacity: 1; animation-name: grow; animation-duration: 1s; transition: all 300ms ease-in-out;}
+                .overlay { opacity: 1; animation-name: grow; animation-duration: 1s; transition: all 300ms ease-in-out;}
             }
         }
     }
