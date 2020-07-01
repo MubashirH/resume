@@ -1,6 +1,24 @@
 * {
   font-family: "PT Sans", sans-serif; }
 
+@keyframes grow {
+  from {
+    top: -100%;
+    left: -100%;
+    transform: scale(1); }
+  to {
+    top: 0;
+    left: 0;
+    transform: scale(2); } }
+@keyframes shrink {
+  to {
+    top: -100%;
+    left: -100%;
+    transform: scale(1); }
+  from {
+    top: 0;
+    left: 0;
+    transform: scale(2); } }
 .name {
   position: relative;
   padding: 2% 10%; }
@@ -209,38 +227,87 @@
       transform: scale(1.05);
       transition: all 150ms ease-in-out; }
 
-.experience .company {
-  padding: 5%;
-  position: relative;
-  border-top-left-radius: 25px;
-  overflow: hidden; }
-  .experience .company p {
-    z-index: 200;
-    opacity: 0;
-    color: white; }
-  .experience .company img {
-    width: 50%; }
-  .experience .company .width {
-    width: 15%; }
-  .experience .company:hover h4 {
-    position: relative;
-    color: white;
-    z-index: 200; }
-  .experience .company:hover p {
-    position: relative;
-    opacity: 1;
-    transition: all 250ms ease-in-out; }
-  .experience .company:hover a {
-    display: block; }
-  .experience .company a {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    background-image: linear-gradient(135Deg, #2d35aa, white);
-    transition: all 150ms ease-in-out; }
+.experience {
+  position: relative; }
+  .experience .section {
+    margin-bottom: 30px; }
+    .experience .section .logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: all 300ms ease-in-out; }
+      .experience .section .logo.quantifys {
+        background-image: url("../images/company/quantifys.png");
+        width: 100%;
+        height: 50%; }
+      .experience .section .logo.tentwenty {
+        background-image: url("../images/company/tenblack.svg");
+        width: 100%;
+        height: 20%; }
+      .experience .section .logo.nine {
+        background-image: url("../images/company/ninestack_logo.svg");
+        width: 100%;
+        height: 20%; }
+      .experience .section .logo.ploverdile {
+        background-image: url("../images/company/cropped-ploverdile-153x105.png");
+        width: 100%;
+        height: 40%; }
+    .experience .section .company {
+      padding: 5%;
+      position: relative;
+      border-top-left-radius: 25px;
+      overflow: hidden; }
+      .experience .section .company h4 {
+        opacity: 0;
+        margin-bottom: 20px; }
+      .experience .section .company p {
+        z-index: 200;
+        opacity: 0;
+        color: white; }
+      .experience .section .company img {
+        width: 50%; }
+      .experience .section .company .width {
+        width: 15%; }
+      .experience .section .company a {
+        opacity: 0;
+        position: absolute;
+        border-radius: 50%;
+        width: 100%;
+        height: 200%;
+        top: 0%;
+        left: 0;
+        transform: scale(2);
+        z-index: 100;
+        background-image: linear-gradient(135Deg, #2d35aa, #2d35aac9);
+        animation-name: shrink;
+        animation-duration: 1s;
+        transition: all 300ms ease-in-out; }
+    .experience .section:hover .quantifys {
+      transform: translate(-50%, -150%); }
+    .experience .section:hover .tentwenty {
+      transform: translate(-50%, -320%); }
+    .experience .section:hover .nine {
+      transform: translate(-50%, -330%); }
+    .experience .section:hover .ploverdile {
+      transform: translate(-50%, -200%); }
+    .experience .section:hover .company h4 {
+      position: relative;
+      color: white;
+      z-index: 200;
+      opacity: 1; }
+    .experience .section:hover .company p {
+      position: relative;
+      opacity: 1;
+      transition: all 210ms ease-in-out; }
+    .experience .section:hover .company a {
+      opacity: 1;
+      animation-name: grow;
+      animation-duration: 1s;
+      transition: all 300ms ease-in-out; }
 
 /*# sourceMappingURL=style.css.map */

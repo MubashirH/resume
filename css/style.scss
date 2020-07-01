@@ -2,9 +2,18 @@
     font-family: "PT Sans", sans-serif;
 }
 
-body {
-    // background-color: rgba(236, 236, 236, 0.15);
+
+//animations definetions
+@keyframes grow {
+    from { top: -100%; left: -100%; transform: scale(1);}
+    to {top: 0; left: 0; transform: scale(2);}
 }
+@keyframes shrink {
+    to {top: -100%; left: -100%; transform: scale(1);}
+    from {top: 0; left: 0; transform: scale(2);}
+}
+
+
 
 .name {
     position: relative;
@@ -252,29 +261,58 @@ body {
 
 
 .experience {
-    .company {
-        padding: 5%;
-        position: relative;
-        border-top-left-radius: 25px;
-        overflow: hidden;
-        p { z-index: 200; opacity: 0; color: white;}
-        img { width: 50%; }
-        .width {width: 15%;}
-        &:hover {
-            h4 { position: relative; color: white; z-index: 200;}
-            p { position: relative; opacity: 1; transition: all 250ms ease-in-out;}
-           a { display: block; } 
-        }
-        a {
-            display: none;
+    position: relative;
+    .section{
+        margin-bottom: 30px;
+        .logo {
             position: absolute;
-            top: 0;
-            left: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             width: 100%;
-            height: 100%;
-            z-index: 100;
-            background-image: linear-gradient(135Deg  ,#2d35aa, white);
-            transition: all 150ms ease-in-out;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: all 300ms ease-in-out;
+            &.quantifys { background-image: url('../images/company/quantifys.png'); width: 100%; height: 50%;}
+            &.tentwenty { background-image: url('../images/company/tenblack.svg'); width: 100%; height: 20%;}
+            &.nine { background-image: url('../images/company/ninestack_logo.svg'); width: 100%; height: 20%;}
+            &.ploverdile { background-image: url('../images/company/cropped-ploverdile-153x105.png'); width: 100%; height: 40%;}
+        }
+        .company {
+            padding: 5%;
+            position: relative;
+            border-top-left-radius: 25px;
+            overflow: hidden;
+            h4 { opacity: 0; margin-bottom: 20px;}
+            p { z-index: 200; opacity: 0; color: white;}
+            img { width: 50%; }
+            .width {width: 15%;}
+            a {
+                opacity: 0;
+                position: absolute;
+                border-radius: 50%;
+                width: 100%;
+                height: 200%;
+                top: 0%;
+                left: 0;
+                transform: scale(2);
+                z-index: 100;
+                background-image: linear-gradient(135Deg  ,#2d35aa, #2d35aac9);
+                animation-name: shrink; animation-duration: 1s;
+                transition: all 300ms ease-in-out;
+            }
+        }
+        &:hover {
+            .quantifys { transform: translate(-50%, -150%); }
+            .tentwenty { transform: translate(-50%, -320%); }
+            .nine { transform: translate(-50%, -330%); }
+            .ploverdile { transform: translate(-50%, -200%); }
+            .company {
+                h4 { position: relative; color: white; z-index: 200; opacity: 1;}
+                p { position: relative; opacity: 1; transition: all 210ms ease-in-out;}
+                a { opacity: 1; animation-name: grow; animation-duration: 1s; transition: all 300ms ease-in-out;}
+            }
         }
     }
 }

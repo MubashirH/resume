@@ -8,7 +8,7 @@ $(document).ready(function () {
             el: '.swiper-pagination',
             clickable: true,
         },
-    })
+    });
 
     new Swiper('.project-container', {
         slidesPerView: 3,
@@ -18,5 +18,14 @@ $(document).ready(function () {
           prevEl: '.swiper-prev',
         },
         
+    });
+
+
+    $('.company').mouseenter(function(){
+        $(this).addClass('shadow');
     })
+    .mouseleave(function(){
+        $(this).removeClass('shadow');
+    })
+
 })
