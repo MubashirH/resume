@@ -322,6 +322,17 @@
                 p { position: relative; opacity: 1; transition: all 210ms ease-in-out;}
                 .overlay { opacity: 1; animation-name: grow; animation-duration: 1s; transition: all 300ms ease-in-out;}
             }
+            &::after { position: absolute; color: #2d35aa; font-size: 25px; }
+            &:nth-of-type(3) {
+                &::after { content: "\21D2"; right: -15px; top: 50%; transform: translateY(-50%); }
+            }
+            &:nth-of-type(4) {
+                &::after { content: "\21D1"; right: 80%; top: -35px; transform: translateX(-20%); }
+            }
+            &:nth-of-type(2) {
+                &::after { content: "\21D0"; left: -15px; top: 50%; transform: translateY(-50%); }
+            }
         }
+        
     }
 }
