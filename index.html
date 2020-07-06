@@ -12,31 +12,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container-full">
         <div class="d-flex justify-content-between">
-            <div class="name">
+            <div class="name d-flex flex-column justify-content-center">
                 <div class="menu">
                     <img src="images/icon/logo.png">
                     <div class="menu-list"></div>
                 </div>
                 <div>
-                    <p class="m-0">Hi, There</p>
-                    <h1>I'm Mubashir</h1>
-                    <h1>Husain.</h1>
-                    <h6>Front End Developer and love to play BasketBall</h6>
-                </div>
-                <div class="buttons mt-5">
-                    <button data-hover="Connect" class="mr-2">
-                        <div>Say Hello!</div>
-                    </button>
-                    <button data-hover="I am Here">
-                        <div>About Me</div>
-                    </button>
+                    <div>
+                        <p class="m-0">Hi, There</p>
+                        <h1>I'm Mubashir</h1>
+                        <h1>Husain.</h1>
+                        <h6>Front End Developer and love to play BasketBall</h6>
+                    </div>
+                    <div class="buttons mt-5">
+                        <button data-hover="Connect" class="mr-2">
+                            <a href="#contact"></a>
+                            <div>Say Hello!</div>
+                        </button>
+                        <button data-hover="I am Here">
+                            <a href="#about_me"></a>
+                            <div>About Me</div>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="my-pic">
@@ -54,21 +58,23 @@
             </div>
         </div>
     </div>
-    <div class="technologies container-ful">
-        <h2 class="ml-5 mb-5">Work With:</h2>
-        <div class="tech-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/icon/html-5.svg"></div>
-                <div class="swiper-slide"><img src="images/icon/css.svg"></div>
-                <div class="swiper-slide"><img src="images/icon/js-format.svg"></div>
-                <div class="swiper-slide"><img src="images/icon/angular.svg"></div>
-                <div class="swiper-slide"><img src="images/icon/sass.svg"></div>
-                <div class="swiper-slide"><img src="images/icon/after-effects.svg"></div>
-                <div class="swiper-slide"><img src="images/icon/illustrator.svg"></div>
-                <div class="swiper-slide"><img src="images/icon/experience.svg"></div>
-                <div class="swiper-slide"><img src="images/icon/photoshop.svg"></div>
+    <div class="technologies">
+        <div class="container">
+            <h2 class="mb-5">Work With:</h2>
+            <div class="tech-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/icon/html-5.svg"></div>
+                    <div class="swiper-slide"><img src="images/icon/css.svg"></div>
+                    <div class="swiper-slide"><img src="images/icon/js-format.svg"></div>
+                    <div class="swiper-slide"><img src="images/icon/angular.svg"></div>
+                    <div class="swiper-slide"><img src="images/icon/sass.svg"></div>
+                    <div class="swiper-slide"><img src="images/icon/after-effects.svg"></div>
+                    <div class="swiper-slide"><img src="images/icon/illustrator.svg"></div>
+                    <div class="swiper-slide"><img src="images/icon/experience.svg"></div>
+                    <div class="swiper-slide"><img src="images/icon/photoshop.svg"></div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
     </div>
     <div class="container project mt-5">
@@ -99,11 +105,14 @@
             </div>
         </div>
     </div>
-    <div class="container experience mt-5">
+    <div class="container mt-5">
         <h3 class="mb-4">Worked for</h3>
+    </div>
+    <div class="container experience " id="exp">
         <div class="row">
             <div class="section col-12 col-sm-6 col-md-6 col-lg-6">
                 <div class="quantifys logo"></div>
+                <p class="period">April,2019 - February, 2020</p>
                 <div class="company">
                     <h4>Quantifys</h4>
                     <p>Here is where I started my journey with Angular framework.&nbsp;
@@ -117,6 +126,7 @@
             </div>
             <div class="section col-12 col-sm-6 col-md-6 col-lg-6">
                 <div class="tentwenty logo"></div>
+                <p class="period">January,2019 - April, 2019</p>
                 <div class="company">
                     <h4>TenTwenty</h4>
                     <p>Now being a legit Frontend developer hungry for more I joined tentwenty,&nbsp;
@@ -129,19 +139,8 @@
                 </div>
             </div>
             <div class="section col-12 col-sm-6 col-md-6 col-lg-6">
-                <div class="ploverdile logo"></div>
-                <div class="company">
-                    <h4>Ploverdile</h4>
-                    <p>I started my development here working on Django framework because of my knowledge in python.&nbsp;
-                        Worked with a senior developer from overseas, creating single page components.&nbsp;
-                        Learned a little about the MVC model and its workings.
-                    </p>
-                    <div class="overlay"></div>
-                    <a href="http://ploverdile.com/" target="blank"></a>
-                </div>
-            </div>
-            <div class="section col-12 col-sm-6 col-md-6 col-lg-6">
                 <div class="nine logo"></div>
+                <p class="period">September,2019 - December, 2019</p>
                 <div class="company">
                     <h4>Nine Stack</h4>
                     <p>Joined as Junior-Frontend Developer. Got introduced to all the frontend technologies here.&nbsp;
@@ -152,13 +151,78 @@
                     <a href="https://ninestack.com/" target="blank"></a>
                 </div>
             </div>
+            <div class="section col-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="ploverdile logo"></div>
+                <p class="period">November,2018 - April, 2019</p>
+                <div class="company">
+                    <h4>Ploverdile</h4>
+                    <p>I started my development here working on Django framework because of my knowledge in python.&nbsp;
+                        Worked with a senior developer from overseas, creating single page components.&nbsp;
+                        Learned a little about the MVC model and its workings.
+                    </p>
+                    <div class="overlay"></div>
+                    <a href="http://ploverdile.com/" target="blank"></a>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="about mt-5" id="about_me">
+        <div class="container">
+            <h3 class="mb-5">About me!</h3>
+            <div class="col-12 col-sm-8 col-md-7 col-lg-7 content">
+                <h1 class="mb-5">
+                    <a href="" class="typewrite" data-period="2000" 
+                    data-type='[ "FrontEnd", "HTML", "CSS", "jQuery", "Angular", "Bootstrap", "SASS" ]'>
+                    <span class="wrap"></span>
+                  </a> developer & FreeLancer, who builds to mesmerize.</h1>
+                <p>I also create designs<a class="dribbble" href="" target="blank">&nbsp;&nbsp;&nbsp;</a>, but mostly 
+                I bring those desgins to life. My professional profile and connections can be found here<a class="linked" href="https://www.linkedin.com/in/hmubashir08" target="blank">&nbsp;&nbsp;&nbsp;</a>
+                </p>
+                <p>Being an Enthusiastic developer with a passion for animations, who always build websites indulging users with mesmerizing experience.</p>
+                <p>Feel free to look at some of my work <a class="git" href="https://github.com/MubashirH" target="blank">&nbsp;&nbsp;&nbsp;</a> or get in touch to build <a class="mail" href="mailto:hmubashir08@gmail.com" target="blank">&nbsp;&nbsp;&nbsp;</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container contact" id="contact">
+        <h2 class="mb-4">Connect !!</h2>
+        <div class="row">
+            <form data-aos="fade-in" class="col-12 col-md-6 col-lg-6" action="contact.php" methog="post" >
+                <div>
+                    <div class="mt-3">
+                        <input class="width" name="name" type="text" placeholder="Name">
+                        <input class="width" name="phone" type="number" placeholder="Phone Number">
+                    </div>
+                    <div class="mt-3">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="mt-3">
+                        <textarea type="text" name="message" rows="5"
+                            placeholder="Tell me what you are looking for."></textarea>
+                    </div>
+                    <button class="btn" type="submit">Submit</button>
+                </div>
+            </form>
+            <div data-aos="fade-up" class="col-12 col-md-6 col-lg-6 order-first order-md-6 d-flex justify-content-end">
+                <img src="images/create.png">
+            </div>
+        </div>
+    </div>
+    <footer class="d-flex justify-content-around flex-wrap">
+        <div class="tel"><span>&nbsp;&nbsp;&nbsp;</span><a href="tel:+919845355690">9845355690</a></div>
+        <a href="mailto:hmubashir08@gmail.com">hmubashir08@gmail.com</a>
+        <div class="follow">
+            <a href="https://www.facebook.com/mubashir.husain.77/" target="blank"></a>
+            <a href="https://www.instagram.com/_stylk_/" target="blank"></a>
+            <a href="https://www.linkedin.com/in/hmubashir08" target="blank"></a>
+        </div>
+    </footer>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="script/wordanimation.js"></script>
     <script src="script/script.js"></script>
 
 </body>

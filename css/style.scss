@@ -2,6 +2,17 @@
     font-family: "PT Sans", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+//mixin
+@mixin breakpoint($size) {
+    @media (max-width: $size+px) {
+        @content
+    }
+}
+
 
 //animations definetions
 @keyframes grow {
@@ -17,7 +28,7 @@
 
 .name {
     position: relative;
-    padding: 2% 10%;
+    padding: 2% 14%;
     .menu {
         width: 100%;
         margin-bottom: 50px;
@@ -39,6 +50,12 @@
             background-color: transparent;
             position: relative;
             overflow: hidden;
+            a {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 1000;
+            }
             div {
                 transition: all 0.3s ease-in-out;
             }
@@ -73,7 +90,7 @@
     position: relative;
     height: 100vh;
     background-color: #2d35aa;
-    width: 27%;
+    width: 35%;
     &:hover {
         .dots {
             background-image: radial-gradient(white 1px, transparent 0);
@@ -116,8 +133,8 @@
     }
     .dots {
         transition: all 300ms ease-in-out;
-        width: 150px;
-        height: 170px;
+        width: 170px;
+        height: 200px;
         left: 100px;
         top: 30px;
         position: absolute;
@@ -128,7 +145,7 @@
     .image {
         transition: all 300ms ease-in-out;
         position: absolute;
-        padding-top: calc(2236 / 1641 * 100%);
+        padding-top: calc(1323 / 1080 * 100%);
         width: 100%;
         background-image: url("../images/profile.jpg");
         background-position: center;
@@ -186,7 +203,7 @@
 }
 
 .technologies {
-    padding: 5%;
+    padding: 5% 0;
     background-color: #2d35aa;
     h2 { color: white;}
     .tech-container {
@@ -201,6 +218,16 @@
                     object-fit: contain;
                 }
             }
+        }
+        .swiper-pagination {
+            bottom: -50%;
+        }
+        .swiper-pagination-bullet {
+            background-color: white !important;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: transparent !important;
+            border: 3px solid white;
         }
     }
 }
@@ -263,8 +290,25 @@
 .experience {
     position: relative;
     margin-bottom: 30px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    &::-webkit-scrollbar { height: 10px; background-color: rgba(202, 202, 202, 0.24); border-top: 3px solid white; border-bottom: 3px solid white;}
+    &::-webkit-scrollbar-thumb { 
+        cursor: pointer;
+        background-color: #2d35aa;
+    }
+    .row {
+        flex-wrap: nowrap;
+        padding-top: 60px;
+    }
     .section{
         margin-bottom: 30px;
+        .period {
+            position: absolute;
+            left: 50%;
+            top: 80%;
+            transform: translateX(-50%);
+        }
         .logo {
             position: absolute;
             left: 50%;
@@ -313,6 +357,7 @@
             }
         }
         &:hover {
+            .period { opacity: 0; transition: all 200ms ease-out;}
             .quantifys { transform: translate(-50%, -150%); }
             .tentwenty { transform: translate(-50%, -320%); }
             .nine { transform: translate(-50%, -330%); }
@@ -322,17 +367,113 @@
                 p { position: relative; opacity: 1; transition: all 210ms ease-in-out;}
                 .overlay { opacity: 1; animation-name: grow; animation-duration: 1s; transition: all 300ms ease-in-out;}
             }
-            &::after { position: absolute; color: #2d35aa; font-size: 25px; }
-            &:nth-of-type(3) {
-                &::after { content: "\21D2"; right: -15px; top: 50%; transform: translateY(-50%); }
-            }
-            &:nth-of-type(4) {
-                &::after { content: "\21D1"; right: 80%; top: -35px; transform: translateX(-20%); }
-            }
-            &:nth-of-type(2) {
-                &::after { content: "\21D0"; left: -15px; top: 50%; transform: translateY(-50%); }
-            }
         }
         
+    }
+}
+
+.about {
+    width: 100%;
+    padding: 5% 0;
+    background-image: url("../images/back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    *{ color: white;}
+    .content {
+        margin: auto;
+        a {
+            margin: 0 5px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            &:focus, &:hover { text-decoration: none;}
+        }
+        .dribbble { background-image: url('../images/icon/dribbble.svg');}
+        .linked { background-image: url('../images/icon/linkedin.svg');}
+        .git { background-image: url('../images/icon/github.svg');}
+        .mail { background-image: url('../images/icon/envelope.svg');}
+    }
+}
+
+
+.contact {
+    padding: 5% 0;
+    h2 { font-weight: 700; }
+    div.d-flex { @include breakpoint(767) { justify-content: center !important;}}
+    img {
+        width: 80%;
+        @include breakpoint(767) {
+            margin-top: 20px;
+        }
+    }
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .width {
+            width: 45%;
+            &:nth-child(2) {
+                float: right;
+            }
+        }
+        label,
+        input,
+        textarea {
+            width: 100%;
+            margin-top: 10px;
+            &:focus { outline: none;}
+        }
+        input,
+        textarea {
+            border: none;
+            border-bottom: 1px solid #2d35aa;
+            background-color: transparent;
+            border-radius: 2px;
+            resize: none;
+            &:-moz-placeholder {
+                padding-left: 10px;
+            }
+        }
+        .btn {
+            margin-top: 30px;
+            padding: 5px 25px;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    padding: 2% 0;
+    background-color: #2d35aa;
+    a {
+        color: white;
+        &:focus, &:hover {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    span {
+        margin-right: 10px;
+        background-image: url('../images/icon/phone.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .follow {
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            margin-right: 10px;
+            display: inline-block;
+            height: 20px;
+            width:20px;
+            background-size: contain;
+            background-position: center;
+            &:nth-of-type(1) { background-image: url("../images/icon/facebook.svg");}
+            &:nth-of-type(2) { background-image: url("../images/icon/instagram.svg");}
+            &:nth-of-type(3) { background-image: url("../images/icon/linkedin.svg");}
+        }
     }
 }

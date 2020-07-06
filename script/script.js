@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     new Swiper('.tech-container', {
-        slidesPerView: 6,
+        slidesPerView: 5,
         spaceBetween: 30,
         pagination: {
             el: '.swiper-pagination',
@@ -28,4 +28,8 @@ $(document).ready(function () {
         $(this).removeClass('shadow');
     })
 
+    $('#exp').bind('DOMMouseScroll mousewheel',function(e, delta) {
+        this.scrollLeft -= (delta*30);
+        e.preventDefault();
+    });
 })
