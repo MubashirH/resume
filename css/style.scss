@@ -91,6 +91,7 @@ html {
     height: 100vh;
     background-color: #2d35aa;
     width: 35%;
+    @include breakpoint(1025) { height: 50vh;}
     &:hover {
         .dots {
             background-image: radial-gradient(white 1px, transparent 0);
@@ -141,6 +142,7 @@ html {
         background-image: radial-gradient(rgba(255, 255, 255, 0.521) 2px, transparent 0);
         background-size: 30px 30px;
         background-position: -19px -19px;
+        @include breakpoint(1025) { display: none;}
     }
     .image {
         transition: all 300ms ease-in-out;
@@ -156,6 +158,7 @@ html {
         border-bottom-right-radius: 2px;
         left: -55%;
         top: 25%;
+        @include breakpoint(1025) { display: none;}
         .ball {
             transition: all 600ms ease-in-out;
             position: absolute;

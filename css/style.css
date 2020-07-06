@@ -74,6 +74,9 @@ html {
   height: 100vh;
   background-color: #2d35aa;
   width: 35%; }
+  @media (max-width: 1025px) {
+    .my-pic {
+      height: 50vh; } }
   .my-pic:hover .dots {
     background-image: radial-gradient(white 1px, transparent 0);
     left: 80px;
@@ -113,6 +116,9 @@ html {
     background-image: radial-gradient(rgba(255, 255, 255, 0.521) 2px, transparent 0);
     background-size: 30px 30px;
     background-position: -19px -19px; }
+    @media (max-width: 1025px) {
+      .my-pic .dots {
+        display: none; } }
   .my-pic .image {
     transition: all 300ms ease-in-out;
     position: absolute;
@@ -127,6 +133,9 @@ html {
     border-bottom-right-radius: 2px;
     left: -55%;
     top: 25%; }
+    @media (max-width: 1025px) {
+      .my-pic .image {
+        display: none; } }
     .my-pic .image .ball {
       transition: all 600ms ease-in-out;
       position: absolute;
