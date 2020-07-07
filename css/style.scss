@@ -507,10 +507,7 @@ button {
     }
     .responsive {
         .period { opacity: 0; transition: all 200ms ease-out;}
-        .quantifys { transform: translate(-20%, -180%); }
-        .tentwenty { transform: translate(-20%, -370%); }
-        .nine { transform: translate(-20%, -370%); }
-        .ploverdile { transform: translate(-20%, -220%); }
+        .quantifys, .nine, .ploverdile, .tentwenty { display: none; }
         .company {
             h4 { position: relative; color: white; z-index: 200; opacity: 1;}
             p { position: relative; opacity: 1; transition: all 210ms ease-in-out;}

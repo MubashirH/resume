@@ -529,14 +529,8 @@ html {
   .experience .responsive .period {
     opacity: 0;
     transition: all 200ms ease-out; }
-  .experience .responsive .quantifys {
-    transform: translate(-20%, -180%); }
-  .experience .responsive .tentwenty {
-    transform: translate(-20%, -370%); }
-  .experience .responsive .nine {
-    transform: translate(-20%, -370%); }
-  .experience .responsive .ploverdile {
-    transform: translate(-20%, -220%); }
+  .experience .responsive .quantifys, .experience .responsive .nine, .experience .responsive .ploverdile, .experience .responsive .tentwenty {
+    display: none; }
   .experience .responsive .company h4 {
     position: relative;
     color: white;
