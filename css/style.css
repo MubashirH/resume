@@ -450,10 +450,24 @@ html {
         background-image: url("../images/company/cropped-ploverdile-153x105.png");
         width: 100%;
         height: 40%; }
+      @media (max-width: 1024px) {
+        .experience .section .logo.quantifys {
+          z-index: 1000;
+          height: 25%; }
+        .experience .section .logo.tentwenty {
+          z-index: 1000;
+          height: 11%; }
+        .experience .section .logo.nine {
+          z-index: 1000;
+          height: 11%; }
+        .experience .section .logo.ploverdile {
+          z-index: 1000;
+          height: 20%; } }
     .experience .section .company {
       padding: 5%;
       position: relative;
       border-top-left-radius: 25px;
+      height: 100%;
       overflow: hidden; }
       .experience .section .company h4 {
         opacity: 0;
@@ -497,7 +511,7 @@ html {
     .experience .section:hover .nine {
       transform: translate(-50%, -330%); }
     .experience .section:hover .ploverdile {
-      transform: translate(-50%, -200%); }
+      transform: translate(-50%, -220%); }
     .experience .section:hover .company h4 {
       position: relative;
       color: white;
@@ -516,13 +530,13 @@ html {
     opacity: 0;
     transition: all 200ms ease-out; }
   .experience .responsive .quantifys {
-    transform: translate(-50%, -150%); }
+    transform: translate(-20%, -180%); }
   .experience .responsive .tentwenty {
-    transform: translate(-50%, -320%); }
+    transform: translate(-20%, -370%); }
   .experience .responsive .nine {
-    transform: translate(-50%, -330%); }
+    transform: translate(-20%, -370%); }
   .experience .responsive .ploverdile {
-    transform: translate(-50%, -200%); }
+    transform: translate(-20%, -220%); }
   .experience .responsive .company h4 {
     position: relative;
     color: white;
