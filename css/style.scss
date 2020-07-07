@@ -14,7 +14,7 @@ html {
 }
 
 
-//animations definetions
+//animations definitions
 @keyframes grow {
     from { top: -100%; left: -100%; transform: scale(1);}
     to {top: 0; left: 0; transform: scale(2);}
@@ -23,26 +23,131 @@ html {
     to {top: -100%; left: -100%; transform: scale(1);}
     from {top: 0; left: 0; transform: scale(2);}
 }
+@keyframes slide-in {
+    0% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes slide-out {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-200%);
+    }
+}
 
+h2 {
+    @include breakpoint(1025) { font-size: 28px;}
+    @include breakpoint(768) { font-size: 26px;}
+    @include breakpoint(480) { font-size: 24px;}
+    @include breakpoint(320) { font-size: 20px;}
+}
+h1 {
+    @include breakpoint(1025) { font-size: 36px;}
+    @include breakpoint(768) { font-size: 34px;}
+    @include breakpoint(480) { font-size: 28px;}
+    @include breakpoint(320) { font-size: 24px;}
+}
+button {
+    @include breakpoint(600) {
+        padding: 1% 2%;
+        font-size: 12px;
+    }
+}
+
+
+.mobile-menu {
+    position: fixed;
+    right: 4%;
+    top: 4%;
+    padding: 2%;
+    z-index: 1000;
+    &.active {
+        .ham {
+            // align-items: baseline;
+            transition: all 200ms ease-in;
+            span {
+                margin: 0;
+                transition: all 200ms ease-in;
+                background-color: white;
+                &:nth-of-type(1) { transform: rotate(45Deg); height: 10px;}
+                &:nth-of-type(2) { height: 15px; }
+                &:nth-of-type(3) { transform: rotate(-45Deg); height: 10px;}
+            }
+        }
+        background-color: #05002f5b;
+        border-radius: 5px;
+        transition: all 200ms ease-in;
+        ul {
+            display: block;
+        }
+    }
+    .ham {
+        span {
+            display: block;
+            background-color: #05002f;
+            border-radius: 3px;
+            height: 20px;
+            width: 2px;
+            margin: 0 2px;
+            transition: all 200ms ease-in;
+            &:nth-of-type(1) { height: 15px;}
+            &:nth-of-type(2) { height: 25px;}
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+}
 
 
 .name {
     position: relative;
-    padding: 2% 14%;
+    padding: 5% 14%;
+    @include breakpoint(1023) { 
+        width: 100%;
+        background-image: url('../images/profileback.png');
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    @include breakpoint(600) {
+        p { margin-bottom: 10px !important;}
+        h6 { margin-top: 10px !important;}
+    }
+    @include breakpoint(480) {
+        padding: 5%;
+        background-size: cover;
+        h1, p, h6 ,button { color: #120044;}
+    }
     .menu {
         width: 100%;
         margin-bottom: 50px;
+        @include breakpoint(600) { margin-bottom: 30px;}
         img {
             width: 10%;
             object-fit: contain;
+            @include breakpoint(600) { width: 15%;}
         }
     }
     h1 {
         font-family: "Josefin Slab", serif;
         font-size: 80px;
         color: #05002f;
+        @include breakpoint(767) { font-size: 65px;}
+        @include breakpoint(600) { font-size: 55px;}
+        @include breakpoint(480) { font-size: 40px; color: #120044;}
+        @include breakpoint(360) { font-size: 35px;}
     }
     .buttons {
+        @include breakpoint(600) { margin-top: 15px !important;}
         button {
             border: 2px solid #2d35aa;
             border-radius: 2px;
@@ -92,6 +197,7 @@ html {
     background-color: #2d35aa;
     width: 35%;
     @include breakpoint(1025) { height: 50vh;}
+    @include breakpoint(1023) { display: none;}
     &:hover {
         .dots {
             background-image: radial-gradient(white 1px, transparent 0);
@@ -145,7 +251,7 @@ html {
         @include breakpoint(1025) { display: none;}
     }
     .image {
-        transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out !important;
         position: absolute;
         padding-top: calc(1323 / 1080 * 100%);
         width: 100%;
@@ -158,7 +264,12 @@ html {
         border-bottom-right-radius: 2px;
         left: -55%;
         top: 25%;
-        @include breakpoint(1025) { display: none;}
+        @include breakpoint(1024) { 
+            width: 150%;
+            height: 52%;
+            left: -80%;
+            top: 8%;
+        }
         .ball {
             transition: all 600ms ease-in-out;
             position: absolute;
@@ -208,10 +319,15 @@ html {
 .technologies {
     padding: 5% 0;
     background-color: #2d35aa;
-    h2 { color: white;}
+    h2 { color: white;
+        @include breakpoint(768) { margin-bottom: 10px !important;}
+    }
     .tech-container {
         width: 100%;
+        position: relative;
         overflow: hidden;
+        padding: 5% 0;
+        @include breakpoint(600) { padding: 8% 0;}
         .swiper-wrapper {
             width: 100%;
             .swiper-slide {
@@ -223,10 +339,14 @@ html {
             }
         }
         .swiper-pagination {
-            bottom: -50%;
+            bottom: -3%;
         }
         .swiper-pagination-bullet {
             background-color: white !important;
+            @include breakpoint(600) {
+                width: 6px;
+                height: 6px;
+            }
         }
         .swiper-pagination-bullet-active {
             background-color: transparent !important;
@@ -238,6 +358,11 @@ html {
 .project {
     padding-top: 5%;
     padding-bottom: 5%;
+    @include breakpoint(767) {
+        h2 { margin-bottom: 20px !important;}
+        p { margin: 5px 0 0 0 !important;}
+        .project-container { margin-top: 25px;}
+    }
     .project-container {
         width: 100%;
         height: 300px;
@@ -373,6 +498,18 @@ html {
         }
         
     }
+    .responsive {
+        .period { opacity: 0; transition: all 200ms ease-out;}
+        .quantifys { transform: translate(-50%, -150%); }
+        .tentwenty { transform: translate(-50%, -320%); }
+        .nine { transform: translate(-50%, -330%); }
+        .ploverdile { transform: translate(-50%, -200%); }
+        .company {
+            h4 { position: relative; color: white; z-index: 200; opacity: 1;}
+            p { position: relative; opacity: 1; transition: all 210ms ease-in-out;}
+            .overlay { opacity: 1; animation-name: grow; animation-duration: 1s; transition: all 300ms ease-in-out;}
+        }
+    }
 }
 
 .about {
@@ -405,7 +542,7 @@ html {
     h2 { font-weight: 700; }
     div.d-flex { @include breakpoint(767) { justify-content: center !important;}}
     img {
-        width: 80%;
+        width: 100%;
         @include breakpoint(767) {
             margin-top: 20px;
         }
@@ -432,16 +569,25 @@ html {
         textarea {
             border: none;
             border-bottom: 1px solid #2d35aa;
-            background-color: transparent;
+            background-color: #e0e1ff9f;
             border-radius: 2px;
+            border-top-left-radius: 5px;
             resize: none;
-            &:-moz-placeholder {
-                padding-left: 10px;
+            padding: 1%;
+            padding-left: 10px;
+            &::-moz-placeholder, &::placeholder {
+                color: white;
             }
         }
         .btn {
             margin-top: 30px;
             padding: 5px 25px;
+            border: 2px solid #2d35aa;
+            border-radius: 0;
+            &:hover, &:focus {
+                color: white;
+                background-color: #a2a6f2;
+            }
         }
     }
 }
@@ -469,6 +615,7 @@ footer {
         justify-content: space-evenly;
         a {
             margin-right: 10px;
+            margin-left: 10px;
             display: inline-block;
             height: 20px;
             width:20px;

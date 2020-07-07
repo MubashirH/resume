@@ -13,23 +13,39 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- <div class="mobile-menu">
+            <a class="d-flex ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <ul>
+                <li><span></span><a>HOME</a></li>
+                <li><span></span><a>TECHNOLOGIES</a></li>
+                <li><span></span><a>PROJECTS</a></li>
+                <li><span></span><a>EXPERIENCE</a></li>
+                <li><span></span><a>ABOUT</a></li>
+                <li><span></span><a>CONNECT</a></li>
+            </ul>
+    </div> -->
     <div class="container-full">
         <div class="d-flex justify-content-between">
-            <div class="name d-flex flex-column justify-content-center">
+            <div data-aos="fade-right" class="name d-flex flex-column justify-content-center">
                 <div class="menu">
                     <img src="images/icon/logo.png">
                     <div class="menu-list"></div>
                 </div>
                 <div>
                     <div>
-                        <p class="m-0">Hi, There</p>
-                        <h1>I'm Mubashir</h1>
-                        <h1>Husain.</h1>
-                        <h6>Front End Developer and love to play BasketBall</h6>
+                        <p class="mb-3">Hi, There</p>
+                        <h1 class="m-0">I'm Mubashir</h1>
+                        <h1 class="m-0">Husain.</h1>
+                        <h6 class="mt-4">Front End Developer and love to play BasketBall</h6>
                     </div>
                     <div class="buttons mt-5">
                         <button data-hover="Connect" class="mr-2">
@@ -43,11 +59,11 @@
                     </div>
                 </div>
             </div>
-            <div class="my-pic">
+            <div  class="my-pic">
                 <div class="dots">
 
                 </div>
-                <div class="image">
+                <div data-aos="fade-in" class="image">
                     <div class="ball"></div>
                     <div class="ball"></div>
                     <div class="ball"></div>
@@ -60,8 +76,8 @@
     </div>
     <div class="technologies">
         <div class="container">
-            <h2 class="mb-5">Work With:</h2>
-            <div class="tech-container">
+            <h2 data-aos="fade-in" class="mb-5">Work With:</h2>
+            <div data-aos="fade-left" class="tech-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="images/icon/html-5.svg"></div>
                     <div class="swiper-slide"><img src="images/icon/css.svg"></div>
@@ -77,16 +93,16 @@
             </div>
         </div>
     </div>
-    <div class="container project mt-5">
+    <div class="container project">
         <div class="row">
-            <div class="col-12 col-sm-5 col-md-4">
+            <div data-aos="fade-in" class="col-12 col-sm-12 col-md-4">
                 <h2 class="mb-5">Recent Projects</h2>
                 <p class="mr-5">These projects include FreeLance work with many company build projects</p>
                 <p class="mr-5">Where others are product related with sister companies. It also display demo projects
                     that I had prepared. </p>
             </div>
-            <div class="col-12 col-sm-7 col-md-8">
-                <div class="project-container">
+            <div class="col-12 col-sm-12 col-md-8">
+                <div data-aos="fade-left" class="project-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="images/project/degree_primero.png"><a
                                 href="https://degreeprimero.com/" target="blank">Degree<br />Primero</a></div>
@@ -105,12 +121,13 @@
             </div>
         </div>
     </div>
-    <div class="container mt-5">
+    <hr/>
+    <div data-aos="fade-in" class="container mt-5">
         <h3 class="mb-4">Worked for</h3>
     </div>
     <div class="container experience " id="exp">
         <div class="row">
-            <div class="section col-12 col-sm-6 col-md-6 col-lg-6">
+            <div data-aos="fade-left" class="section col-12 col-sm-8 col-md-6 col-lg-6">
                 <div class="quantifys logo"></div>
                 <p class="period">April,2019 - February, 2020</p>
                 <div class="company">
@@ -124,7 +141,7 @@
                     <a href="https://quantifys.com/" target="blank"></a>
                 </div>
             </div>
-            <div class="section col-12 col-sm-6 col-md-6 col-lg-6">
+            <div data-aos="fade-left" class="section col-12 col-sm-8 col-md-6 col-lg-6">
                 <div class="tentwenty logo"></div>
                 <p class="period">January,2019 - April, 2019</p>
                 <div class="company">
@@ -138,7 +155,7 @@
                     <a href="https://www.tentwenty.me/" target="blank"></a>
                 </div>
             </div>
-            <div class="section col-12 col-sm-6 col-md-6 col-lg-6">
+            <div data-aos="fade-left" class="section col-12 col-sm-8 col-md-6 col-lg-6">
                 <div class="nine logo"></div>
                 <p class="period">September,2019 - December, 2019</p>
                 <div class="company">
@@ -151,7 +168,7 @@
                     <a href="https://ninestack.com/" target="blank"></a>
                 </div>
             </div>
-            <div class="section col-12 col-sm-6 col-md-6 col-lg-6">
+            <div data-aos="fade-left" class="section col-12 col-sm-8 col-md-6 col-lg-6">
                 <div class="ploverdile logo"></div>
                 <p class="period">November,2018 - April, 2019</p>
                 <div class="company">
@@ -168,49 +185,51 @@
     </div>
     <div class="about mt-5" id="about_me">
         <div class="container">
-            <h3 class="mb-5">About me!</h3>
-            <div class="col-12 col-sm-8 col-md-7 col-lg-7 content">
+            <h3 data-aos="fade-in" class="mb-5">About me!</h3>
+            <div data-aos="fade-right" class="col-12 col-sm-10 col-md-9 col-lg-8 content">
                 <h1 class="mb-5">
                     <a href="" class="typewrite" data-period="2000" 
                     data-type='[ "FrontEnd", "HTML", "CSS", "jQuery", "Angular", "Bootstrap", "SASS" ]'>
                     <span class="wrap"></span>
-                  </a> developer & FreeLancer, who builds to mesmerize.</h1>
+                  </a> developer <br/>& FreeLancer, who builds to mesmerize.</h1>
                 <p>I also create designs<a class="dribbble" href="" target="blank">&nbsp;&nbsp;&nbsp;</a>, but mostly 
-                I bring those desgins to life. My professional profile and connections can be found here<a class="linked" href="https://www.linkedin.com/in/hmubashir08" target="blank">&nbsp;&nbsp;&nbsp;</a>
+                I bring those designs to life. My professional profile and connections can be found here<a class="linked" href="https://www.linkedin.com/in/hmubashir08" target="blank">&nbsp;&nbsp;&nbsp;</a>
                 </p>
                 <p>Being an Enthusiastic developer with a passion for animations, who always build websites indulging users with mesmerizing experience.</p>
                 <p>Feel free to look at some of my work <a class="git" href="https://github.com/MubashirH" target="blank">&nbsp;&nbsp;&nbsp;</a> or get in touch to build <a class="mail" href="mailto:hmubashir08@gmail.com" target="blank">&nbsp;&nbsp;&nbsp;</a></p>
             </div>
         </div>
     </div>
-    <div class="container contact" id="contact">
-        <h2 class="mb-4">Connect !!</h2>
-        <div class="row">
-            <form data-aos="fade-in" class="col-12 col-md-6 col-lg-6" action="contact.php" methog="post" >
-                <div>
-                    <div class="mt-3">
-                        <input class="width" name="name" type="text" placeholder="Name">
-                        <input class="width" name="phone" type="number" placeholder="Phone Number">
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2 data-aos="fade-in" class="mb-4">Connect !!</h2>
+            <div class="row">
+                <form data-aos="fade-in" class="col-12 col-md-6 col-lg-6" action="contact.php" methog="post" >
+                    <div>
+                        <div class="mt-3">
+                            <input class="width" name="name" type="text" placeholder="Name">
+                            <input class="width" name="phone" type="number" placeholder="Phone Number">
+                        </div>
+                        <div class="mt-3">
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="mt-3">
+                            <textarea type="text" name="message" rows="5"
+                                placeholder="Tell me what you are looking for."></textarea>
+                        </div>
+                        <button class="btn" type="submit">Submit</button>
                     </div>
-                    <div class="mt-3">
-                        <input type="email" name="email" placeholder="Email">
-                    </div>
-                    <div class="mt-3">
-                        <textarea type="text" name="message" rows="5"
-                            placeholder="Tell me what you are looking for."></textarea>
-                    </div>
-                    <button class="btn" type="submit">Submit</button>
+                </form>
+                <div data-aos="fade-left" class="col-12 col-md-6 col-lg-6 order-first order-md-6 d-flex justify-content-end">
+                    <img src="images/create.png">
                 </div>
-            </form>
-            <div data-aos="fade-up" class="col-12 col-md-6 col-lg-6 order-first order-md-6 d-flex justify-content-end">
-                <img src="images/create.png">
             </div>
         </div>
     </div>
     <footer class="d-flex justify-content-around flex-wrap">
-        <div class="tel"><span>&nbsp;&nbsp;&nbsp;</span><a href="tel:+919845355690">9845355690</a></div>
-        <a href="mailto:hmubashir08@gmail.com">hmubashir08@gmail.com</a>
-        <div class="follow">
+        <div class="tel ml-3 mr-3 mt-3"><span>&nbsp;&nbsp;&nbsp;</span><a href="tel:+919845355690">9845355690</a></div>
+        <a class="ml-3 mr-3 mt-3" href="mailto:hmubashir08@gmail.com">hmubashir08@gmail.com</a>
+        <div class="follow ml-3 mr-3 mt-3">
             <a href="https://www.facebook.com/mubashir.husain.77/" target="blank"></a>
             <a href="https://www.instagram.com/_stylk_/" target="blank"></a>
             <a href="https://www.linkedin.com/in/hmubashir08" target="blank"></a>
@@ -223,6 +242,10 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="script/wordanimation.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="script/script.js"></script>
 
 </body>

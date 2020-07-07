@@ -1,6 +1,21 @@
 
 
 $(document).ready(function () {
+
+    //menu click
+    $('.mobile-menu').click( function() {
+        if ($(this).hasClass('active')) {
+            $(this).find('ul').css('animation-name','slide-out');
+            setTimeout( function() { $(this).removeClass('active'); }, 300)
+        } else {
+            $(this).addClass('active');
+            $(this).find('ul').css('animation-name','slide-in');
+        }
+
+    });
+
+
+
     new Swiper('.tech-container', {
         slidesPerView: 5,
         spaceBetween: 30,
@@ -8,6 +23,11 @@ $(document).ready(function () {
             el: '.swiper-pagination',
             clickable: true,
         },
+        breakpoints: {
+            1024: {slidesPerView: 4},
+            480: { slidesPerView: 3},
+            320: { slidesPerView: 3}
+        }
     });
 
     new Swiper('.project-container', {
@@ -17,6 +37,11 @@ $(document).ready(function () {
           nextEl: '.swiper-next',
           prevEl: '.swiper-prev',
         },
+        breakpoints: {
+            768: { slidesPerView: 3},
+            480: { slidesPerView: 2},
+            320: { slidesPerView: 1.5}
+        }
         
     });
 
@@ -32,4 +57,21 @@ $(document).ready(function () {
         this.scrollLeft -= (delta*30);
         e.preventDefault();
     });
-})
+
+
+
+    //responsive triggers
+    if ($(window).width() < 1025) {
+        $('.experience .section').addClass('responsive');
+    } else {
+        $('.experience .section').removeClass('responsive');
+    }
+});
+
+$(window).resize( function() {
+    if ($(window).width() < 1025) {
+        $('.experience .section').addClass('responsive');
+    } else {
+        $('.experience .section').removeClass('responsive');
+    }
+});
