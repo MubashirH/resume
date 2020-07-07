@@ -556,6 +556,7 @@ button {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        p { display: none;}
         .width {
             width: 45%;
             &:nth-child(2) {

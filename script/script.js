@@ -20,7 +20,8 @@ $(document).ready(function () {
 
         var form = $(this);
         $.post(form.attr("action"), form.serialize()).then(function() {
-            alert("Thank you!");
+            form.find('p').show();
+            setTimeout( function() { form.find('p').hide(); }, 1000);
           });
     });
 

@@ -590,6 +590,8 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    .contact form p {
+      display: none; }
     .contact form .width {
       width: 45%; }
       .contact form .width:nth-child(2) {
