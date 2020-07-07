@@ -19,9 +19,9 @@ $(document).ready(function () {
         e.preventDefault();
 
         var $form = $(this);
-        $.post($form.attr('action'), $form.serialize().then( function() {
-            alert('done');
-        }))
+        $.post($form.attr("action"), $form.serialize()).then(function() {
+            alert("Thank you!");
+          });
     });
 
 
