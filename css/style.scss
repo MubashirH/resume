@@ -448,12 +448,14 @@ button {
             background-size: contain;
             background-repeat: no-repeat;
             transition: all 300ms ease-in-out;
+            &.knacksystems { background-image: url('../images/company/knack-systems.png'); width: 100%; height: 15%; }
             &.worksmart { background-image: url('../images/company/worksmart_logo_v3.png'); width: 100%; height: 15%; }
             &.quantifys { background-image: url('../images/company/quantifys.png'); width: 100%; height: 50%;}
             &.tentwenty { background-image: url('../images/company/tenblack.svg'); width: 100%; height: 20%;}
             &.nine { background-image: url('../images/company/ninestack_logo.svg'); width: 100%; height: 20%;}
             &.ploverdile { background-image: url('../images/company/cropped-ploverdile-153x105.png'); width: 100%; height: 40%;}
             @include breakpoint(1024) {
+                &.knacksystems { z-index: 1000;  height: 7%; }
                 &.worksmart { z-index: 1000;  height: 7%; }
                 &.quantifys { z-index: 1000; height: 25%;}
                 &.tentwenty { z-index: 1000; height: 11%;}
@@ -496,6 +498,7 @@ button {
         }
         &:hover {
             .period { opacity: 0; transition: all 200ms ease-out;}
+            .knacksystems { transform: translate(-50%, -400%); }
             .worksmart { transform: translate(-50%, -400%); }
             .quantifys { transform: translate(-50%, -150%); }
             .tentwenty { transform: translate(-50%, -320%); }
@@ -511,7 +514,7 @@ button {
     }
     .responsive {
         .period { opacity: 0; transition: all 200ms ease-out;}
-        .worksmart, .quantifys, .nine, .ploverdile, .tentwenty { display: none; }
+        .knacksystems, .worksmart, .quantifys, .nine, .ploverdile, .tentwenty { display: none; }
         .company {
             h4 { position: relative; color: white; z-index: 200; opacity: 1;}
             p { position: relative; opacity: 1; transition: all 210ms ease-in-out;}
