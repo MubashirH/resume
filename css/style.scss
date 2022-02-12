@@ -256,15 +256,22 @@ button {
         position: absolute;
         padding-top: calc(1323 / 1080 * 100%);
         width: 100%;
-        background-image: url("../images/profile.jpg");
-        background-position: center;
-        background-size: contain;
+        background-image: url("../images/website_profile.jpg");
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
         border-top-left-radius: 50px;
         border-bottom-left-radius: 10px;
         border-top-right-radius: 2px;
         border-bottom-right-radius: 2px;
+        filter: grayscale(1);
+        transition: 200ms all ease-in-out;
         left: -55%;
         top: 25%;
+        &:hover {
+            transition: 200ms all ease-in-out;
+            filter: grayscale(0);
+        }
         @include breakpoint(1024) { 
             width: 150%;
             height: 52%;
@@ -539,11 +546,12 @@ button {
             background-repeat: no-repeat;
             background-size: contain;
             &:focus, &:hover { text-decoration: none;}
+            font-size: 40px;
         }
         .dribbble { background-image: url('../images/icon/dribbble.svg');}
         .linked { background-image: url('../images/icon/linkedin.svg');}
         .git { background-image: url('../images/icon/github.svg');}
-        .mail { background-image: url('../images/icon/envelope.svg');}
+        .mail { background-image: url('../images/icon/envelope.svg'); font-size: 1rem;}
     }
 }
 
