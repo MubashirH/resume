@@ -116,14 +116,14 @@ html {
   background-color: white;
 }
 .mobile-menu.active .ham span:nth-of-type(1) {
-  transform: rotate(45Deg);
+  transform: rotate(45deg);
   height: 10px;
 }
 .mobile-menu.active .ham span:nth-of-type(2) {
   height: 15px;
 }
 .mobile-menu.active .ham span:nth-of-type(3) {
-  transform: rotate(-45Deg);
+  transform: rotate(-45deg);
   height: 10px;
 }
 .mobile-menu.active ul {
@@ -178,7 +178,10 @@ html {
     padding: 5%;
     background-size: cover;
   }
-  .name h1, .name p, .name h6, .name button {
+  .name h1,
+.name p,
+.name h6,
+.name button {
     color: #120044;
   }
 }
@@ -581,6 +584,11 @@ html {
   background-repeat: no-repeat;
   transition: all 300ms ease-in-out;
 }
+.experience .section .logo.cybage {
+  background-image: url("../images/company/cybage.png");
+  width: 50%;
+  height: 40%;
+}
 .experience .section .logo.knacksystems {
   background-image: url("../images/company/knack-systems.png");
   width: 100%;
@@ -612,6 +620,10 @@ html {
   height: 40%;
 }
 @media (max-width: 1024px) {
+  .experience .section .logo.cybage {
+    z-index: 1000;
+    height: 7%;
+  }
   .experience .section .logo.knacksystems {
     z-index: 1000;
     height: 7%;
@@ -669,7 +681,7 @@ html {
   left: 0;
   transform: scale(2);
   z-index: 100;
-  background-image: linear-gradient(135Deg, #2d35aa, #2d35aac9);
+  background-image: linear-gradient(135deg, #2d35aa, #2d35aac9);
   animation-name: shrink;
   animation-duration: 1s;
   transition: all 300ms ease-in-out;
@@ -685,6 +697,9 @@ html {
 .experience .section:hover .period {
   opacity: 0;
   transition: all 200ms ease-out;
+}
+.experience .section:hover .cybage {
+  transform: translate(-50%, -180%);
 }
 .experience .section:hover .knacksystems {
   transform: translate(-50%, -400%);
@@ -702,7 +717,7 @@ html {
   transform: translate(-50%, -330%);
 }
 .experience .section:hover .ploverdile {
-  transform: translate(-50%, -220%);
+  transform: translate(-50%, -180%);
 }
 .experience .section:hover .company h4 {
   position: relative;
@@ -725,7 +740,13 @@ html {
   opacity: 0;
   transition: all 200ms ease-out;
 }
-.experience .responsive .knacksystems, .experience .responsive .worksmart, .experience .responsive .quantifys, .experience .responsive .nine, .experience .responsive .ploverdile, .experience .responsive .tentwenty {
+.experience .responsive .cybage,
+.experience .responsive .knacksystems,
+.experience .responsive .worksmart,
+.experience .responsive .quantifys,
+.experience .responsive .nine,
+.experience .responsive .ploverdile,
+.experience .responsive .tentwenty {
   display: none;
 }
 .experience .responsive .company h4 {
