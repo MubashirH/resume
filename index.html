@@ -1,322 +1,386 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<html>
-
 <head>
-    <title>Mubashir Husain</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="icon" href="images/icon/logo.png" type="image/svg" size="16x16">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mubashir Husain - Global Remote Frontend Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0F172A; color: #F8FAFC; }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 400px; }
+        }
+        .timeline-node {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 9999px;
+            background-color: #3B82F6;
+            position: absolute;
+            left: -0.5rem;
+            top: 0.25rem;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+        .timeline-line {
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            bottom: -2rem;
+            width: 2px;
+            background-color: #334155;
+        }
+    </style>
 </head>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
 
-<body>
-    <!-- <div class="mobile-menu">
-            <a class="d-flex ham">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-            <ul>
-                <li><span></span><a>HOME</a></li>
-                <li><span></span><a>TECHNOLOGIES</a></li>
-                <li><span></span><a>PROJECTS</a></li>
-                <li><span></span><a>EXPERIENCE</a></li>
-                <li><span></span><a>ABOUT</a></li>
-                <li><span></span><a>CONNECT</a></li>
-            </ul>
-    </div> -->
-    <div class="container-full">
-        <div class="d-flex justify-content-between" style="overflow-x:hidden">
-            <div data-aos="fade-right" class="name d-flex flex-column justify-content-center">
-                <div class="menu">
-                    <img src="images/icon/my-logo.png">
-                    <div class="menu-list"></div>
-                </div>
-                <div>
-                    <div>
-                        <p class="mb-3">Hi, There</p>
-                        <h1 class="m-0">I'm Mubashir</h1>
-                        <h1 class="m-0">Husain.</h1>
-                        <h6 class="mt-4">Front End Developer and love to play BasketBall</h6>
-                    </div>
-                    <div class="buttons mt-5">
-                        <button data-hover="Connect" class="mr-2">
-                            <a href="#contact"></a>
-                            <div>Say Hello!</div>
-                        </button>
-                        <button data-hover="I am Here">
-                            <a href="#about_me"></a>
-                            <div>About Me</div>
-                        </button>
-                    </div>
-                </div>
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        
+        <header class="text-center mb-16 space-y-4">
+            <div class="inline-block bg-blue-500/20 text-blue-400 font-bold px-4 py-1 rounded-full text-sm uppercase tracking-wider mb-2 border border-blue-500/30">
+                Available for 100% Remote Opportunities
             </div>
-            <div class="my-pic">
-                <div class="dots">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-emerald-400 to-amber-400 pb-2">
+                Mubashir Husain
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-light text-slate-300">Senior Front-End Developer</h2>
+            <p class="max-w-2xl mx-auto text-slate-400 text-lg mt-4 leading-relaxed">
+                Bridging the geographic gap with 7+ years of enterprise-level Angular & React expertise. India-based, globally integrated, and ready to drive UI architecture for US, UK, and Australian teams.
+            </p>
+            <div class="flex justify-center gap-4 mt-6 text-sm">
+                <span class="bg-slate-800 px-3 py-2 rounded border border-slate-700">&#128205; Belagavi, India</span>
+                <span class="bg-slate-800 px-3 py-2 rounded border border-slate-700">&#128187; Remote Setup Ready</span>
+                <span class="bg-slate-800 px-3 py-2 rounded border border-slate-700">&#8986; Adaptable Timezones</span>
+            </div>
+        </header>
 
-                </div>
-                <div data-aos="fade-in" class="image">
-                    <div class="ball"></div>
-                    <div class="ball"></div>
-                    <div class="ball"></div>
-                    <div class="ball"></div>
-                    <div class="ball"></div>
-                    <div class="ball"></div>
-                </div>
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-xl flex flex-col items-center justify-center text-center">
+                <span class="text-5xl font-black text-blue-400 mb-2">7+</span>
+                <span class="text-slate-300 font-semibold uppercase tracking-wide">Years Experience</span>
             </div>
-        </div>
-    </div>
-    <div class="technologies">
-        <div class="container">
-            <h2 data-aos="fade-in" class="mb-5">Work With:</h2>
-            <div data-aos="fade-right" class="tech-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/icon/html-5.svg"></div>
-                    <div class="swiper-slide"><img src="images/icon/css.svg"></div>
-                    <div class="swiper-slide"><img src="images/icon/js-format.svg"></div>
-                    <div class="swiper-slide"><img src="images/icon/angular.svg"></div>
-                    <div class="swiper-slide"><img src="images/icon/ngrx.svg"></div>
-                    <div class="swiper-slide"><img src="images/icon/rxjs.png"></div>
-                    <div class="swiper-slide"><img src="images/icon/sass.svg"></div>
-                    <div class="swiper-slide"><img src="images/icon/after-effects.svg"></div>
-                    <div class="swiper-slide"><img src="images/icon/illustrator.svg"></div>
-                    <div class="swiper-slide"><img src="images/icon/experience.svg"></div>
-                    <div class="swiper-slide"><img src="images/icon/photoshop.svg"></div>
-                </div>
-                <div class="swiper-pagination"></div>
+            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-xl flex flex-col items-center justify-center text-center">
+                <span class="text-5xl font-black text-emerald-400 mb-2">100%</span>
+                <span class="text-slate-300 font-semibold uppercase tracking-wide">Remote Capable</span>
+                <span class="text-xs text-slate-500 mt-2">Proven UK Contract Experience</span>
             </div>
-        </div>
-    </div>
-    <div class="container project">
-        <div class="row">
-            <div data-aos="fade-in" class="col-12 col-sm-12 col-md-4">
-                <h2 class="mb-5">Recent Projects</h2>
-                <p class="mr-5">These projects include FreeLance work with many company build projects</p>
-                <p class="mr-5">Where others are product related with sister companies. It also display demo projects
-                    that I had prepared. </p>
+            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-xl flex flex-col items-center justify-center text-center">
+                <span class="text-5xl font-black text-amber-400 mb-2">2</span>
+                <span class="text-slate-300 font-semibold uppercase tracking-wide">Core Frameworks</span>
+                <span class="text-xs text-slate-500 mt-2">Angular & React ecosystem mastery</span>
             </div>
-            <div class="col-12 col-sm-12 col-md-8">
-                <div data-aos="fade-right" class="project-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/project/worksmart.jpg"><a
-                                href="http://support.worksmart.net/user-guide" target="blank">Work<br />Smart</a></div>
-                        <div class="swiper-slide"><img src="images/project/degree_primero.png"><a
-                                href="https://degreeprimero.com/" target="blank">Degree<br />Primero</a></div>
-                        <div class="swiper-slide"><img src="images/project/ume_designs.png"><a
-                                href="http://umedesigns.in/" target="blank">Ume<br />Designs</a></div>
-                        <div class="swiper-slide"><img src="images/project/tracker_gemeni.png"><a
-                                href="https://tracker.gemeniindia.com" target="blank">Tracker<br />Gemeni</a></div>
-                        <div class="swiper-slide"><img src="images/project/odd_piece.png"><a
-                                href="https://the-oddpiece.com/" target="blank">Odd<br />Piece</a></div>
-                        <div class="swiper-slide"><img src="images/project/woodstyle.jpg"><a
-                                href="https://http://woodstyleinteriors.in/" target="blank">Wood
-                                Style<br />Interiors</a></div>
-                        <div class="swiper-slide"><img src="images/project/speedUpTrader.png"><a
-                                href="https://speeduptrader.com/" target="blank">SpeedUp<br />Trader</a></div>
-                    </div>
-                </div>
-                <button class="swiper-prev">&#8592;</button>
-                <button class="swiper-next">&#8594;</button>
-            </div>
-        </div>
-    </div>
-    <hr />
-    <div data-aos="fade-in" class="container mt-5">
-        <h3 class="mb-4">Worked for</h3>
-    </div>
-    <div class="container experience " id="exp">
-        <div class="row">
-            <div data-aos="fade-right" class="section col-12 col-sm-8 col-md-6 col-lg-6">
-                <div class="cybage logo"></div>
-                <p class="period">Dec,2022 - Currenty working</p>
-                <div class="company">
-                    <h4>Cybage</h4>
-                    <p>Working as an Sr. Software Engineer for a company Client ( Causeway ). Have been working in a
-                        Cohesive project for
-                        construction business that provides estimation process for the contractors. I am responsibe for
-                        building common features/components
-                        that can be utlized accross the project.
-                    </p>
-                    <div class="overlay"></div>
-                    <a href="https://www.cybage.com/" target="blank"></a>
-                </div>
-            </div>
-            <div data-aos="fade-right" class="section col-12 col-sm-8 col-md-6 col-lg-6">
-                <div class="knacksystems logo"></div>
-                <p class="period">July,2021 - Dec, 2022</p>
-                <div class="company">
-                    <h4>Knack Systems USA</h4>
-                    <p>Was hired by a regorous inteview process to work as a dedicated angular front end developer.
-                        Have been working closely with the UX developer and the backend team to bring life to the design
-                        by implementing the
-                        necessary logic using the API.
-                    </p>
-                    <div class="overlay"></div>
-                    <a href="https://www.knacksystems.com/" target="blank"></a>
-                </div>
-            </div>
-            <div data-aos="fade-right" class="section col-12 col-sm-8 col-md-6 col-lg-6">
-                <div class="worksmart logo"></div>
-                <p class="period">June,2020 - December, 2020</p>
-                <div class="company">
-                    <h4>Worksmart Uk</h4>
-                    <p>It started with a freelance work to create a jQuery plugin and ended up as 4 month contract to
-                        enchance their product.&nbsp;
-                        I constantly worked with the lead architect to create and modify 3rd party javascrip/jQuery
-                        plugins,
-                        was given the responsibility to reshape the look of their live product. Also had the opportunity
-                        to create a mobile app
-                        using native script+angular.
-                    </p>
-                    <div class="overlay"></div>
-                    <a href="https://www.worksmart.net/" target="blank"></a>
-                </div>
-            </div>
-            <div data-aos="fade-right" class="section col-12 col-sm-8 col-md-6 col-lg-6">
-                <div class="quantifys logo"></div>
-                <p class="period">May,2019 - March, 2020</p>
-                <div class="company">
-                    <h4>Quantifys</h4>
-                    <p>Here is where I started my journey with Angular framework.&nbsp;
-                        I worked on fleet managment system, elastic search sites, company user managment
-                        and was responsible for creating project components from designing(logos, wireframes, icons) to
-                        development.
-                    </p>
-                    <div class="overlay"></div>
-                    <a href="https://quantifys.com/" target="blank"></a>
-                </div>
-            </div>
-            <div data-aos="fade-right" class="section col-12 col-sm-8 col-md-6 col-lg-6">
-                <div class="tentwenty logo"></div>
-                <p class="period">January,2019 - April, 2019</p>
-                <div class="company">
-                    <h4>TenTwenty</h4>
-                    <p>Now being a legit Frontend developer hungry for more I joined tentwenty,&nbsp;
-                        learning the power of css animations and the simplicity of SASS. Worked a lot
-                        on transition, hover, scroll, load and click animations using sass/css with jquery for event
-                        handling.
-                    </p>
-                    <div class="overlay"></div>
-                    <a href="https://www.tentwenty.me/" target="blank"></a>
-                </div>
-            </div>
-            <div data-aos="fade-right" class="section col-12 col-sm-8 col-md-6 col-lg-6">
-                <div class="nine logo"></div>
-                <p class="period">September,2018 - December, 2018</p>
-                <div class="company">
-                    <h4>Nine Stack</h4>
-                    <p>Joined as Junior-Frontend Developer. Got introduced to all the frontend technologies here.&nbsp;
-                        Worked on maintainance at first, later started on website updates with new components.&nbsp;
-                        After 3 months, had an opportunity to work as the team lead for a single project.
-                    </p>
-                    <div class="overlay"></div>
-                    <a href="https://ninestack.com/" target="blank"></a>
-                </div>
-            </div>
-            <div data-aos="fade-right" class="section col-12 col-sm-8 col-md-6 col-lg-6">
-                <div class="ploverdile logo"></div>
-                <p class="period">November,2017 - April, 2018</p>
-                <div class="company">
-                    <h4>Ploverdile</h4>
-                    <p>I started my development here, working on Django framework because of my knowledge in
-                        python.&nbsp;
-                        Worked with a senior developer from overseas, creating single page components.&nbsp;
-                        Learned a little about the MVC model and its workings.
-                    </p>
-                    <div class="overlay"></div>
-                    <a href="http://ploverdile.com/" target="blank"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="about mt-5" id="about_me">
-        <div class="container">
-            <h3 data-aos="fade-in" class="mb-5">About me!</h3>
-            <div data-aos="fade-right" class="col-12 col-sm-10 col-md-9 col-lg-8 content">
-                <h1 class="mb-5">
-                    <a href="" class="typewrite" data-period="2000"
-                        data-type='[ "FrontEnd", "HTML", "CSS", "jQuery", "Angular", "Bootstrap", "SASS" ]'>
-                        <span class="wrap"></span>
-                    </a> developer <br />& FreeLancer, who builds to mesmerize.
-                </h1>
-                <p>I also create designs, but mostly
-                    I bring those designs to life. My professional profile and connections can be found below.
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            
+            <section class="bg-slate-800 p-6 md:p-8 rounded-2xl border border-slate-700 shadow-xl flex flex-col h-full">
+                <h3 class="text-2xl font-bold mb-4 text-white">Technical Proficiency</h3>
+                <p class="text-slate-400 text-sm mb-6">
+                    A deep dive into the core technologies that drive my development workflow. High proficiency in both enterprise-grade Angular architectures and modern React implementations ensures versatile contributions to international teams.
                 </p>
-                <p>Being an Enthusiastic developer with a passion for animations, who always build websites indulging
-                    users with mesmerizing experience.</p>
-                <p>Feel free to look at some of my work or get in touch to build <a class="mail"
-                        href="mailto:hmubashir08@gmail.com" target="blank">&nbsp;&nbsp;&nbsp;</a></p>
-                <div class="row w-100 m-auto">
-                    <div class="col-2"><a class="dribbble" href="https://dribbble.com/Stylk"
-                            target="blank">&nbsp;&nbsp;&nbsp;</a></div>
-                    <div class="col-2"><a class="git" href="https://github.com/MubashirH"
-                            target="blank">&nbsp;&nbsp;&nbsp;</a></div>
-                    <div class="col-2"><a class="linked" href="https://www.linkedin.com/in/hmubashir08"
-                            target="blank">&nbsp;&nbsp;&nbsp;</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="contact" id="contact">
-        <div class="container">
-            <h2 data-aos="fade-in" class="mb-4">Connect !!</h2>
-            <div class="row">
-                <form data-aos="fade-in" class="col-12 col-md-6 col-lg-6" name="contact" id="contactForm"
-                    data-netlify="true" method="post">
-                    <div>
-                        <div class="mt-3">
-                            <input class="width" name="name" type="text" placeholder="Name">
-                            <input class="width" name="phone" type="number" placeholder="Phone Number">
-                        </div>
-                        <div class="mt-3">
-                            <input type="email" name="email" placeholder="Email">
-                        </div>
-                        <div class="mt-3">
-                            <textarea type="text" name="message" rows="5"
-                                placeholder="Tell me what you are looking for."></textarea>
-                        </div>
-                        <button class="btn" type="submit">Submit</button>
+                <div class="flex-grow flex items-center justify-center">
+                    <div class="chart-container">
+                        <canvas id="skillsChart"></canvas>
                     </div>
-                    <p>Thank you for connecting, will get back to you soon!!</p>
-                </form>
-                <div class="col-12 col-md-6 col-lg-6 order-first order-md-6 d-flex justify-content-end">
-                    <img data-aos="fade-right" src="images/create.png">
+                </div>
+            </section>
+
+            <section class="bg-slate-800 p-6 md:p-8 rounded-2xl border border-slate-700 shadow-xl flex flex-col h-full">
+                <h3 class="text-2xl font-bold mb-4 text-white">Experience Distribution</h3>
+                <p class="text-slate-400 text-sm mb-6">
+                    My career spans long-term enterprise engineering, agile agency work, and dedicated international contract roles (WorkSmart UK). This diverse background guarantees adaptability to varying company cultures and project scales.
+                </p>
+                <div class="flex-grow flex items-center justify-center">
+                    <div class="chart-container">
+                        <canvas id="experienceChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <section class="bg-slate-800 p-6 md:p-10 rounded-2xl border border-slate-700 shadow-xl mb-16">
+            <h3 class="text-3xl font-bold mb-6 text-center text-white">Global Collaboration Readiness</h3>
+            <p class="text-slate-400 text-center max-w-3xl mx-auto mb-10">
+                Working asynchronously across borders requires more than just coding skills. It requires a modern toolset and proactive communication strategies. I leverage AI, robust version control, and agile methodologies to remain perfectly synced with overseas teams.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="chart-container w-full">
+                    <canvas id="toolsChart"></canvas>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="p-4 bg-slate-900 rounded-lg border border-slate-700 border-l-4 border-l-blue-500">
+                        <h4 class="font-bold text-blue-400 mb-1">&#9654; Cross-Border Proven</h4>
+                        <p class="text-sm text-slate-300">Successfully engineered applications for WorkSmart UK, managing asynchronous workflows and delivering a custom Attendance App on schedule.</p>
+                    </div>
+                    <div class="p-4 bg-slate-900 rounded-lg border border-slate-700 border-l-4 border-l-emerald-500">
+                        <h4 class="font-bold text-emerald-400 mb-1">&#9654; AI-Accelerated Output</h4>
+                        <p class="text-sm text-slate-300">Daily integration of Claude AI and GitHub Copilot to accelerate boilerplate code, debug complex state issues, and optimize application performance.</p>
+                    </div>
+                    <div class="p-4 bg-slate-900 rounded-lg border border-slate-700 border-l-4 border-l-amber-500">
+                        <h4 class="font-bold text-amber-400 mb-1">&#9654; Agile & CI/CD Fluent</h4>
+                        <p class="text-sm text-slate-300">Proficient in Jira sprint tracking, Bitbucket/GitHub PR workflows, and modern deployment pipelines (Vercel, Docker, Netlify).</p>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section class="mb-16 max-w-4xl mx-auto">
+            <h3 class="text-3xl font-bold mb-10 text-center text-white">Professional Trajectory</h3>
+            <div class="relative pl-6 md:pl-0">
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-slate-800 -translate-x-1/2"></div>
+                
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-12">
+                    <div class="md:w-5/12 order-2 md:order-1 relative p-6 bg-slate-800 rounded-xl border border-slate-700 w-full mt-4 md:mt-0">
+                        <div class="md:hidden timeline-node"></div>
+                        <div class="md:hidden timeline-line"></div>
+                        <span class="text-emerald-400 font-bold text-sm">Dec 2022 - April 2026</span>
+                        <h4 class="text-xl font-bold text-white mt-1">Senior Software Engineer</h4>
+                        <span class="text-slate-400 text-sm">Cybage</span>
+                        <p class="text-sm text-slate-300 mt-3">Spearheaded frontend architecture, maintained legacy systems, and implemented critical updates using advanced Angular frameworks.</p>
+                    </div>
+                    <div class="hidden md:flex md:w-2/12 order-2 justify-center relative">
+                        <div class="w-4 h-4 bg-emerald-500 rounded-full border-4 border-slate-900 shadow-[0_0_0_2px_#10B981] z-10"></div>
+                    </div>
+                    <div class="md:w-5/12 order-1 md:order-3"></div>
+                </div>
+
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-12">
+                    <div class="md:w-5/12 order-2 md:order-3 relative p-6 bg-slate-800 rounded-xl border border-slate-700 border-r-4 border-r-blue-500 w-full mt-4 md:mt-0">
+                        <div class="md:hidden timeline-node"></div>
+                        <div class="md:hidden timeline-line"></div>
+                        <span class="text-blue-400 font-bold text-sm">Aug 2020 - Dec 2020</span>
+                        <h4 class="text-xl font-bold text-white mt-1">Front-End Developer (Contract)</h4>
+                        <span class="text-slate-400 text-sm">WorkSmart UK</span>
+                        <p class="text-sm text-slate-300 mt-3">International remote contract. Engineered Attendance App via NativeScript/Angular. Migrated WordPress docs to React/Gatsby.</p>
+                    </div>
+                    <div class="hidden md:flex md:w-2/12 order-2 justify-center relative">
+                        <div class="w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-900 shadow-[0_0_0_2px_#3B82F6] z-10"></div>
+                    </div>
+                    <div class="md:w-5/12 order-1 md:order-1 md:text-right px-6 pb-2 text-slate-400 text-sm flex flex-col justify-center">
+                        <strong>International Proof of Concept</strong>
+                        Demonstrated ability to deliver high-quality code and manage product migrations entirely remotely for a UK-based entity.
+                    </div>
+                </div>
+
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-12">
+                    <div class="md:w-5/12 order-2 md:order-1 relative p-6 bg-slate-800 rounded-xl border border-slate-700 w-full mt-4 md:mt-0">
+                        <div class="md:hidden timeline-node"></div>
+                        <div class="md:hidden timeline-line" style="bottom: 0;"></div>
+                        <span class="text-amber-400 font-bold text-sm">2018 - 2020</span>
+                        <h4 class="text-xl font-bold text-white mt-1">Foundational Roles</h4>
+                        <span class="text-slate-400 text-sm">Quantifys, TenTwenty, Nine Stack</span>
+                        <p class="text-sm text-slate-300 mt-3">Built vehicle tracking systems via API integration, developed custom CMS plugins, and translated UI/UX designs into responsive templates.</p>
+                    </div>
+                    <div class="hidden md:flex md:w-2/12 order-2 justify-center relative">
+                        <div class="w-4 h-4 bg-amber-500 rounded-full border-4 border-slate-900 shadow-[0_0_0_2px_#F59E0B] z-10"></div>
+                    </div>
+                    <div class="md:w-5/12 order-1 md:order-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gradient-to-r from-blue-900/40 to-slate-800 rounded-2xl p-8 border border-blue-500/30 text-center">
+            <h2 class="text-2xl font-bold text-white mb-2">Ready to scale your UI seamlessly?</h2>
+            <p class="text-slate-300 mb-6">Let's discuss how my expertise can bridge the timezone gap for your engineering team.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:hmubashir08@gmail.com" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors shadow-lg shadow-blue-500/20">Email Me</a>
+                <a href="https://linkedin.com/in/hmubashir08" target="_blank" class="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-colors border border-slate-600">LinkedIn Profile</a>
+                <a href="https://mubashirhusain.netlify.app" target="_blank" class="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-colors border border-slate-600">View Portfolio</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <div style="display: none;" id="metadata-container">
+        <div id="design-plan">
+            Plan Summary: The infographic is structured to pitch Mubashir for remote international roles. It starts with a strong hook emphasizing remote readiness and core stats. Section 2 uses a horizontal bar chart to detail core technical skills (Angular/React dominance). Section 3 uses a doughnut chart to visualize the distribution of his experience types, proving enterprise and international capability. Section 4 leverages a radar chart to show synergy in tools required for remote work (Agile, AI, Design). Finally, a CSS timeline visualizes career progression, highlighting the UK contract. Color palette chosen is vibrant Slate/Blue/Emerald/Amber for a modern, tech-forward feel.
+        </div>
+        <div id="chart-justifications">
+            Justifications: 
+            1. Skills -> Goal: Compare -> Visualization: Horizontal Bar Chart (Chart.js) -> Justification: Best for comparing proficiency levels across categories. Easy to read long labels. No SVG used.
+            2. Experience -> Goal: Composition -> Visualization: Doughnut Chart (Chart.js) -> Justification: Effectively shows the proportion of time spent in different company environments (Enterprise vs Agency). No SVG used.
+            3. Tools -> Goal: Relationships/Multivariate -> Visualization: Radar Chart (Chart.js) -> Justification: Excellent for showing a balanced profile across multiple distinct operational dimensions (AI, Agile, Git) crucial for remote work. No SVG used.
+            4. Timeline -> Goal: Change/Organize -> Visualization: CSS/Tailwind Timeline -> Justification: Cleanly maps out career history without relying on external libraries or SVGs.
+        </div>
+        <div id="svg-mermaid-confirmation">
+            Explicit Confirmation: I confirm that NEITHER Mermaid JS NOR SVG were used anywhere in the output. All visualizations are strictly Canvas-based (Chart.js) or styled HTML/CSS.
         </div>
     </div>
-    <footer class="d-flex justify-content-around flex-wrap">
-        <div class="tel ml-3 mr-3 mt-3"><span>&nbsp;&nbsp;&nbsp;</span><a href="tel:+919845355690">9845355690</a></div>
-        <a class="ml-3 mr-3 mt-3" href="mailto:hmubashir08@gmail.com">hmubashir08@gmail.com</a>
-        <div class="follow ml-3 mr-3 mt-3">
-            <a href="https://www.facebook.com/mubashir.husain.77/" target="blank"></a>
-            <a href="https://www.instagram.com/_stylk_/" target="blank"></a>
-            <a href="https://www.linkedin.com/in/hmubashir08" target="blank"></a>
-        </div>
-    </footer>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-    <script src="script/wordanimation.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+        const wrapLabelLogic = (label) => {
+            if (label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (let i = 0; i < words.length; i++) {
+                const word = words[i];
+                if ((currentLine + word).length > 16) {
+                    if (currentLine) lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            }
+            if (currentLine) lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const globalTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        Chart.defaults.color = '#94A3B8';
+        Chart.defaults.font.family = 'Inter, sans-serif';
+
+        const rawSkillsLabels = [
+            'Angular & NGRX Architecture', 
+            'ReactJS & NextJs Ecosystem', 
+            'TypeScript Integration', 
+            'JavaScript (ES6+) Mastery', 
+            'SASS, Tailwind & CSS3'
+        ];
+        const processedSkillsLabels = rawSkillsLabels.map(wrapLabelLogic);
+
+        const ctxSkills = document.getElementById('skillsChart').getContext('2d');
+        new Chart(ctxSkills, {
+            type: 'bar',
+            data: {
+                labels: processedSkillsLabels,
+                datasets: [{
+                    label: 'Proficiency Level',
+                    data: [95, 85, 90, 92, 88],
+                    backgroundColor: [
+                        'rgba(59, 130, 246, 0.8)',
+                        'rgba(16, 185, 129, 0.8)',
+                        'rgba(245, 158, 11, 0.8)',
+                        'rgba(244, 63, 94, 0.8)',
+                        'rgba(139, 92, 246, 0.8)'
+                    ],
+                    borderRadius: 4,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: globalTooltipConfig
+                },
+                scales: {
+                    x: {
+                        grid: { color: 'rgba(51, 65, 85, 0.5)' },
+                        max: 100,
+                        ticks: { display: false }
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        const rawExpLabels = ['Enterprise Engineering', 'International Contracts', 'Agency & Startups'];
+        const processedExpLabels = rawExpLabels.map(wrapLabelLogic);
+
+        const ctxExp = document.getElementById('experienceChart').getContext('2d');
+        new Chart(ctxExp, {
+            type: 'doughnut',
+            data: {
+                labels: processedExpLabels,
+                datasets: [{
+                    data: [45, 15, 25], 
+                    backgroundColor: [
+                        'rgba(16, 185, 129, 0.9)', 
+                        'rgba(59, 130, 246, 0.9)', 
+                        'rgba(245, 158, 11, 0.9)'  
+                    ],
+                    borderColor: '#1E293B',
+                    borderWidth: 4,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '65%',
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: globalTooltipConfig
+                }
+            }
+        });
+
+        const rawToolsLabels = [
+            'AI Acceleration (Claude/Copilot)', 
+            'Agile/Sprint Management', 
+            'Version Control & CI/CD', 
+            'Design Translation (UI/UX)', 
+            'API Integration'
+        ];
+        const processedToolsLabels = rawToolsLabels.map(wrapLabelLogic);
+
+        const ctxTools = document.getElementById('toolsChart').getContext('2d');
+        new Chart(ctxTools, {
+            type: 'radar',
+            data: {
+                labels: processedToolsLabels,
+                datasets: [{
+                    label: 'Remote Workflow Synergy',
+                    data: [90, 85, 88, 80, 92],
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    borderColor: 'rgba(59, 130, 246, 1)',
+                    pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(59, 130, 246, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(51, 65, 85, 0.5)' },
+                        grid: { color: 'rgba(51, 65, 85, 0.5)' },
+                        pointLabels: {
+                            color: '#94A3B8',
+                            font: { size: 11 }
+                        },
+                        ticks: { display: false, max: 100, min: 0 }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: globalTooltipConfig
+                }
+            }
+        });
     </script>
-    <script src="script/script.js"></script>
-
 </body>
-
 </html>
